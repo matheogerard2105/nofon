@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Ne se demande pas par une pop-up runtime : l'utilisateur l'accorde manuellement
+        via Settings.ACTION_USAGE_ACCESS_SETTINGS (ARCHITECTURE-2.md §2.1). Lint la
+        classe "ProtectedPermissions" par défaut : il ne connaît pas ce mécanisme
+        d'octroi manuel spécifique aux apps non-système, d'où le tools:ignore.
+    -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--
+        Couvre exactement le besoin du futur sélecteur d'exceptions (Phase 4), sans la
+        permission à haut risque QUERY_ALL_PACKAGES (ARCHITECTURE-2.md §2.3).
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+</manifest>

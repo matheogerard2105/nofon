@@ -1,0 +1,13 @@
+# Copie ce fichier en local.properties (jamais versionné) et renseigne les valeurs.
+
+# Emplacement du SDK Android (rempli automatiquement par Android Studio si absent).
+sdk.dir=/Users/matheo/Library/Android/sdk
+
+# Projet Supabase — Réglages du projet -> API.
+SUPABASE_URL=
+SUPABASE_ANON_KEY=
+
+# Client ID OAuth "Web" créé dans Google Cloud Console pour ce projet Android
+# (package com.nofon.app + empreinte SHA-1 de la signature debug/release), puis
+# activé comme provider Google dans Supabase Auth.
+GOOGLE_WEB_CLIENT_ID=
